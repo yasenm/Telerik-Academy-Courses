@@ -37,14 +37,20 @@ class ExchangeBits
             {
                 if (bitOnFirstPos == 1)
                 {
+                    bitOnSecondPos = bitOnFirstPos;
                     number = number | (bitOnFirstPos << firstposition);
                     number = number & ~(bitOnSecondPos << secondposition);
                 }
                 else
                 {
+                    bitOnFirstPos = bitOnSecondPos;
+                    number = number & ~(bitOnFirstPos << firstposition);
                     number = number | (bitOnSecondPos << secondposition);
-                    number = number & (bitOnFirstPos << firstposition);
                 }
+            }
+            else
+            {
+
             }
             firstposition++;
             secondposition++;
@@ -53,3 +59,4 @@ class ExchangeBits
         Console.WriteLine("Bitwise new representation of number is : {0}", Convert.ToString(number, 2).PadLeft(32, '0'));
     }
 }
+
