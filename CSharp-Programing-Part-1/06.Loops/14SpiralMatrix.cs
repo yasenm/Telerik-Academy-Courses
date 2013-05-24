@@ -73,9 +73,9 @@ namespace _14SpiralMatrix
                             startNumber++;
                         }
                         inputPosTopLeft = true;
+                        startRow++;     // we update the starting rows and columns for when the next while loop starts
+                        startCol++;
                     }
-                    startRow++;     // we update the starting rows and columns for when the next while loop starts
-                    startCol++;
                     // check if the numbers we print should stop printing and the matrix is complete
                     if (startNumber == (endNumber + 1))
                     {
