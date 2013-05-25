@@ -1,101 +1,192 @@
 using System;
+using System.Threading;
+using System.Linq;
+using System.Collections.Generic;
+using System.Timers;
+using System.Diagnostics;
 
-//Write a program that reads a positive integer number N (N < 20) from console
-//and outputs in the console the numbers 1 ... N numbers arranged as a spiral.
-//    -Example for N = 4
+//
 
-//   1  2  3  4
-//  12 13 14  5
-//  11 16 15  6
-//  10  9  8  7
-
-namespace _14SpiralMatrix
+namespace MyGame
 {
-    class SpiralMatrix
+    class MyGame
     {
+        //----------- Initialise a structure of .value for objects to be used or implemented.
+        struct Object
+        {
+            public int x;                       // we add .x , .y , .sizeOfRock , .symbol , .color
+            public int y;                       // to the objects we gonna use in the code for our
+            public int sizeOfRock;              // convinience.
+            public string symbol;
+            public ConsoleColor color;
+        }
+        //----------- Function that with the input said will draw on the console our rocks.
+        static void Draw(int posX, int posY, ConsoleColor color, string str)
+        {
+            Console.SetCursorPosition(posX, posY);
+            Console.ForegroundColor = color;
+            Console.Write(str);
+        }
         static void Main()
         {
-            //---------- Still wondering how to solve it :) thats why its the same as last one
+            int score = 0;
+            string overalTime = "";
+            string dwarfBody = "(0)";       // seting dwarfs body
+            int chanceToSkipLine = 30;      // will make sure we dont have symbols on every line
+            bool endGameTrigger = false;
+            //----------- Initialise the symbols that will represent the falling rocks.
+            char[] rocksTypes = 
+                {
+                    '~', '!', '@', '#', '$',
+                    '%', '^', '&', '*', '?',
+                    '/', '<', '>', '|'
+                };
+            //----------- Variables that will be used in main loop for rocks
+            int countOfRocks = 0;
+            //int maxCountOfRocks = 3;
+            int maxSizeOfRocks = 3;
+
+            //----------- Set console field, game field and score screen width and height.
+            Console.WindowHeight = 25;
+            Console.BufferHeight = 25;      // buffers should be equal to the value you want to set
+            Console.WindowWidth = 80;       // for more convinience
+            Console.BufferWidth = 80;
+
+            //----------- Generate random number to use for random position, color, chance of rocks and size of rocks
+            Random randomNumber = new Random();
+
+            //----------- Initialise objects we wanna use
+            List<Object> rocks = new List<Object>();    // making list of objects all falling rocks on screen will be pushed in
+            // it and used in the loop
+            //Object temp;              // will contain temp values if needed
+            Object dwarf;               // will represent dwarf
+
+            //Positioning the dwarf in the window
+            dwarf.x = 20;
+            dwarf.y = Console.WindowHeight - 1;
+            dwarf.sizeOfRock = 2;
+            dwarf.symbol = dwarfBody;
+            dwarf.color = ConsoleColor.Gray;
+
+            //----------- We make array with different colors so we can change it on every input rock
+            ConsoleColor[] color = 
+                { 
+                    ConsoleColor.Blue, ConsoleColor.White,
+                    ConsoleColor.Green, ConsoleColor.Red,
+                    ConsoleColor.Cyan, ConsoleColor.Yellow,
+                    ConsoleColor.DarkBlue, ConsoleColor.Magenta,
+                    ConsoleColor.Gray, ConsoleColor.DarkYellow
+                };
+
+            //----------- Game timer
+            Stopwatch gameTimer = new Stopwatch();
+            gameTimer.Start();
+            //----------- We start an infinite loop to start drawing symbols all the time in the console
+            while (true)
+            {
 
 
-            // seting the console width and height for more convinient view if a bigger number is selected
-            Console.WindowHeight = 30;
-            Console.BufferHeight = 30;
-            Console.WindowWidth = 85;
-            Console.BufferWidth = 85;
-            Console.WriteLine("Enter parameter for matrix!");
-            Console.Write("N = ");
-            int N = int.Parse(Console.ReadLine());
-            int endN = N;                       // end position of rows on witch to enter numbers
-            int endM = N;                       // end position of columns on witch to enter numbers
-            int startRow = 0;                   // start position of rows on witch to enter numbers
-            int startCol = 0;                   // start position of columns on witch to enter numbers
-            bool inputPosTopLeft = true;       // that is to declare if we are in the top right position of the matrix
-            int startNumber = 1;                // the number that will change the whole time that we will put in the matrix
-            int endNumber = N * N;              // the number at which we should stop entering numbers
-            int[,] spiralMatrix = new int[N,N]; // matrix that we will put numbers in , in this case 2D matrix
-            if (N > 0 && N <= 20)
-            {
-                while (true)
+                //----------- Generate rocks if chance bigger than the one for empty line
+                if (randomNumber.Next(0, 100) > chanceToSkipLine)
                 {
-                    // we check if we are in the top right position of the matrix if so start input from left to right
-                    // until columns end and then from top-right to bottom-right until rows end
-                    if (inputPosTopLeft == true)
+                    countOfRocks = 1;
+                }
+                else
+                {
+                    countOfRocks = 0;
+                }
+                for (int i = 0; i < countOfRocks; i++)
+                {
+                    // creates Object rock with current position row and column
+                    Object rock = new Object()
                     {
-                        // here we use 2 loops that enter the numbers in the sequence comented 3 lines above
-                        for (int i = startRow, j = startCol; j < endN; j++)     // loop that enters numbers in row from left to right
+                        x = randomNumber.Next(2, Console.WindowWidth - 40),         // set random position for column
+                        y = 0,                                                      // set start position for first row
+                        sizeOfRock = randomNumber.Next(1, maxSizeOfRocks + 1),                                         // set size of falling rock
+                        symbol = new string(rocksTypes[randomNumber.Next(0, rocksTypes.Length)], 2),     // enter symbol for current generated
+                        color = color[randomNumber.Next(0, color.Length)],                                              // set random color
+                    };
+                    rocks.Add(rock);
+                }
+                //------------ Dwarf movement module
+                while (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo keyUsed = Console.ReadKey(true);     // indicates if there is a used key
+                    if (keyUsed.Key == ConsoleKey.LeftArrow)            // if LeftArrow key is pressed move left
+                    {
+                        if (dwarf.x > 2)
                         {
-                            spiralMatrix[i, j] = startNumber;
-                            startNumber++;
+                            dwarf.x--;
                         }
-                        endN--;
-                        for (int i = startCol + 1, j = endN; i < endM; i++)     // loop that enters numbers in column from top to bottom
-                        {
-                            spiralMatrix[i, j] = startNumber;
-                            startNumber++;
-                        }
-                        endM--;
-                        inputPosTopLeft = false;       // we reached the bottomright position so we update that we are there like that
                     }
-                    // we check if we are in the bottom-right position if so enter numbers from bottom-right to bottom-left until columns
-                    // end and from bottom-left to top-left until rows end
-                    else
+                    if (keyUsed.Key == ConsoleKey.RightArrow)           // if RightArrow key is pressed move right
                     {
-                        // here we use 2 loops that enter the numbers in the sequence comented 3 lines above
-                        for (int i = endM, j = endN - 1; j > startCol -1; j--)      // loop that enters numbers in row from right to left
+                        if (dwarf.x <= 40)
                         {
-                            spiralMatrix[i, j] = startNumber;
-                            startNumber++;
+                            dwarf.x++;
                         }
-                        for (int i = endM -1, j = startCol; i > startRow; i--)      // loop that enters numbers in column from bottom to top
-                        {
-                            spiralMatrix[i, j] = startNumber;
-                            startNumber++;
-                        }
-                        inputPosTopLeft = true;
-                        startRow++;     // we update the starting rows and columns for when the next while loop starts
-                        startCol++;
-                    }
-                    // check if the numbers we print should stop printing and the matrix is complete
-                    if (startNumber == (endNumber + 1))
-                    {
-                        break;
                     }
                 }
-            }
-            else
-            {
-                Console.WriteLine("N should be > 0 and <= 20");
-            }
-            // loop that prints our matrix in the console
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < N; j++)
+                //----------- Making new List<> with new positions ( 1 row down ) and after that 
+                //----------- rocks gets the new positions after clearing we see the movement
+                List<Object> updatedRocks = new List<Object>();
+                foreach (var item in rocks)
                 {
-                    Console.Write("|{0,3}|", spiralMatrix[i,j]);
+                    Object oldRock = item;
+                    oldRock.y++;
+                    //------------ Check if there is hit from rock to the dwarf, if so break game and print score
+                    if (dwarf.x == oldRock.x && dwarf.y == oldRock.y)
+                    {
+                        endGameTrigger = true;
+                        dwarf.symbol = "HIT!!!";
+                        dwarf.color = ConsoleColor.DarkRed;
+                    }
+                    if (oldRock.y >= Console.WindowHeight)
+                    {
+                        continue;
+                    }
+                    updatedRocks.Add(oldRock);
+                    //Todo: console end
                 }
-                Console.WriteLine();
+                rocks = updatedRocks;
+
+                string time = string.Format("Time : {0}:{1} ", gameTimer.Elapsed.Minutes, gameTimer.Elapsed.Seconds);
+                overalTime = time;
+
+                score++;            // update score
+                Console.Clear();    // clear console and then drow updated content of game
+
+                //----------- Draw falling rocks
+                foreach (Object fallingRock in rocks)
+                {
+                    Draw(fallingRock.x, fallingRock.y, fallingRock.color, fallingRock.symbol);
+                    Draw(dwarf.x, dwarf.y, dwarf.color, dwarf.symbol);
+                }
+                //----------- Draw a line that will separate the score screen from the play screen
+                for (int i = 0; i < Console.WindowHeight; i++)
+                {
+                    Draw(40, i, ConsoleColor.DarkGray, "||");
+                    Draw(0, i, ConsoleColor.DarkGray, "||");
+                }
+                Draw(57, 5, ConsoleColor.Yellow, "Score : " + score);
+                Draw(57, 7, ConsoleColor.Yellow, time);
+
+                //------------ If we triggerd the game to end break loop
+                if (endGameTrigger == true)
+                {
+                    break;
+                }
+                //------------ Controling the pace of the game
+                Thread.Sleep(400);
             }
+            Console.Clear();
+
+            Draw(22, 7, ConsoleColor.Red, "Your score is : " + score);
+            Draw(22, 9, ConsoleColor.Red, "Thank you for Playing!");
+            Draw(22, 11, ConsoleColor.Red, "If you liked it start a new game!");
+            Draw(22, 13, ConsoleColor.Red, "Your time was : " + overalTime);
+            Draw(22, 15, ConsoleColor.Red, "GL & HF");
+            Console.ReadLine();
         }
     }
 }
