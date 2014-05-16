@@ -1,0 +1,1 @@
+https://bitbucket.org/AsenVal/opp/src/08e24b2d8b6de55392411cb4c46267e4b547f7c9/HW6-%20CommanTypeSystem/05.BitArray64/BitArray64.cs?at=master

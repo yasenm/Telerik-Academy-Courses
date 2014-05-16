@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Animal">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAEAAAAQAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AnimalClasses\Animal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.248" />
+  </Class>
+  <Class Name="Cat">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AnimalClasses\Cat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dog">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AnimalClasses\Dog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Frog">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AnimalClasses\Frog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kitten">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AnimalClasses\Kitten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TomCat">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AnimalClasses\TomCat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03AnimalHierarchy.AnimalHierarchy" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>AnimalHierarchy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ISound">
+    <Position X="12.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ISound.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Gender">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Enumerations\Gender.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

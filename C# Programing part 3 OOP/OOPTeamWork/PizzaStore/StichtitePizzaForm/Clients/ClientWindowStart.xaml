@@ -1,0 +1,31 @@
+﻿<Window x:Class="StichtitePizzaForm.ClientWindowStart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                Title="Client order" Height="500" Width="1280" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,1,0,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding Customers}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox  Name ="checker"  Checked="HandleChecker" IsChecked="{Binding IsChecked}" Content="{Binding Path=Item.Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Name="pannel" Grid.Column="1" Margin="5,0,-50,45">
+            <ItemsControl ItemsSource="{Binding}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}">
+                        </TextBlock>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <Button Content="Empty basket" Click ="EmptyBasket"  Grid.Column="1" HorizontalAlignment="Left" Margin="31,429,0,0" VerticalAlignment="Top" Width="77"/>
+        <Button Content="Send order" Click="SendOrder" Grid.Column="1" HorizontalAlignment="Left" Margin="533,429,0,0" VerticalAlignment="Top" Width="77"/>
+    </Grid>
+</Window>
