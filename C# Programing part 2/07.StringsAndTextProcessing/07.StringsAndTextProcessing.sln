@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01DescribeStringsInCSharp", "01DescribeStringsInCSharp\01DescribeStringsInCSharp.csproj", "{761FDCE8-27E8-4E7F-96BB-78916E96F008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02ReadReversePringAString", "02ReadReversePringAString\02ReadReversePringAString.csproj", "{F84CEEE8-AF4D-4C1F-8C58-05FE3F7A06F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03CheckForCorrectBrackets", "03CheckForCorrectBrackets\03CheckForCorrectBrackets.csproj", "{313F6A14-50B2-4740-92FA-93549E33E843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04TimesSubstringIsContained", "04TimesSubstringIsContained\04TimesSubstringIsContained.csproj", "{38CEF372-894A-46BD-9CEE-ECEDF979D924}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{761FDCE8-27E8-4E7F-96BB-78916E96F008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761FDCE8-27E8-4E7F-96BB-78916E96F008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761FDCE8-27E8-4E7F-96BB-78916E96F008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761FDCE8-27E8-4E7F-96BB-78916E96F008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84CEEE8-AF4D-4C1F-8C58-05FE3F7A06F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84CEEE8-AF4D-4C1F-8C58-05FE3F7A06F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84CEEE8-AF4D-4C1F-8C58-05FE3F7A06F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84CEEE8-AF4D-4C1F-8C58-05FE3F7A06F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313F6A14-50B2-4740-92FA-93549E33E843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313F6A14-50B2-4740-92FA-93549E33E843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313F6A14-50B2-4740-92FA-93549E33E843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313F6A14-50B2-4740-92FA-93549E33E843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38CEF372-894A-46BD-9CEE-ECEDF979D924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38CEF372-894A-46BD-9CEE-ECEDF979D924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38CEF372-894A-46BD-9CEE-ECEDF979D924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38CEF372-894A-46BD-9CEE-ECEDF979D924}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

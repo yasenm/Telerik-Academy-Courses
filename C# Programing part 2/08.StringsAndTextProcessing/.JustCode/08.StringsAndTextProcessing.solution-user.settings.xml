@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="b109bd1c-8a7a-412f-8751-eccd5c286c1c">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>15ReplaceAnchorTagInHtml/ReplaceAnchorTagInHtml.cs</FileRelativePath>
+        <ProjectRelativePath>15ReplaceAnchorTagInHtml/15ReplaceAnchorTagInHtml.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>9959628861856677256</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>
