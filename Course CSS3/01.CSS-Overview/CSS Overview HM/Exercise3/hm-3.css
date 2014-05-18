@@ -1,0 +1,53 @@
+body {
+    background-color : #A9A9A9;
+    width : 80%;
+    margin : 50px auto;
+}
+
+/* headers and nav styles */
+body > header {
+    text-align : center;
+}
+
+    header nav ul li {
+        list-style-type : none;
+    }
+
+    header nav ul li a {
+        text-decoration : none;
+        color : #FFFFFF;
+    }
+
+    header nav ul li a:hover {
+        background-color : #D3D3D3;
+        text-decoration : underline;
+    }
+
+h1 {
+    color : #FAFAD2;
+}
+
+/* articles styles */
+article > footer {
+    text-align : left;
+    font-size : 80%;
+}
+
+aticle h1 {
+    text-align : left;
+}
+
+/* styles for all footers */
+footer a {
+    color : #000;
+    text-decoration : none;
+}
+
+footer a:hover {
+    text-decoration : underline;
+}
+
+/* main footer styles */
+footer {
+    text-align : center;
+}

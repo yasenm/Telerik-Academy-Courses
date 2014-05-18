@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>homework-design-2</title>
+</head>
+<body>
+    <header>
+        <h1><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">What is LinkedIn?</a></li>
+                <li><a href="#">Join Today</a></li>
+                <li>
+                    <fieldset>
+                        <legend>Sign in</legend>
+                        <form method="get">
+                            <ul>
+                                <li>
+                                    <label for="email">Email : </label>
+                                    <input type="email" id="email" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" />
+                                </li>
+                                <li>
+                                    <label for="passw">Password : </label>
+                                    <input type="password" id="passw" />
+                                </li>
+                                <li>
+                                    <input type="submit" value="Sign in" />
+                                </li>
+                            </ul>
+                        </form>
+                    </fieldset>
+                </li>
+            </ul>
+        </nav>
+        <hr width="98%" />
+    </header>
+    <section>
+        <article>
+            <h2>Over 175 milion professionals use LinkedIn to exachange information, ideas and opportunities</h2>
+            <ul>
+                <li>Stay informed about contacts and industry</li>
+                <li>Find the people &Aacute; knowledge you need to achieve your goals</li>
+                <li>Control your professional identity online</li>
+            </ul>
+        </article>
+    </section>
+    <section class="sign-up">
+        <h2>Join LinkedIn Today</h2>
+        <fieldset>
+            <legend>Sign up</legend>
+            <form method="get">
+                <ul>
+                    <li>
+                        <label for="fn">First name</label>
+                        <br />
+                        <input type="text" id="fn" />
+                    </li>
+                    <li>
+                        <label for="ln">Last name</label>
+                        <br />
+                        <input type="text" id="ln" />
+                    </li>
+                    <li>
+                        <label for="email">Email : </label>
+                        <br />
+                        <input type="email" id="email" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" />
+                    </li>
+                    <li>
+                        <label for="passw">Password : </label>
+                        <br />
+                        <input type="password" id="passw" />
+                        <br />
+                        <p>6 or more characters</p>
+                    </li>
+                </ul>
+                <p><input type="submit" value="Join now" /></p>
+                <p>Already on LinkedIn?<a href="#">Sign up</a></p>
+            </form>
+        </fieldset>
+    </section>
+    <section class="search">
+        <form>
+            <h3>Search for someone by name</h3>
+            <ul>
+                <li>
+                    <label for="fn-s">First name</label>
+                    <input type="text" id="fn-s" />
+                </li>
+                <li>
+                    <label for="ln-s">Last name</label>
+                    <input type="text" id="ln-s" />
+                </li>
+            </ul>
+            <input type="submit" value="Go" />
+        </form>
+    </section>
+</body>
+</html>

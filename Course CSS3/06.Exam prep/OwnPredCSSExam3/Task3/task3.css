@@ -1,0 +1,138 @@
+body,
+html,
+div,
+form,
+fieldset,
+legend,
+label,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+  font-size: 18px;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper form {
+  border: 1px solid #444444;
+  border-radius: 15px;
+  margin-left: 25px;
+  margin-top: 25px;
+  text-align: right;
+  padding: 15px;
+  background: #ebff5b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ebff5b 0%, #444444 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebff5b), color-stop(100%, #444444));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ebff5b 0%, #444444 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ebff5b 0%, #444444 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ebff5b 0%, #444444 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ebff5b 0%, #444444 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+  color: #FFF;
+  width: 380px;
+  font-size: 0.9em;
+}
+body #wrapper form fieldset {
+  border: 3px solid #555555;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+body #wrapper form fieldset legend {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.30em;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body #wrapper form fieldset label {
+  font-size: 1.0em;
+}
+body #wrapper form fieldset input {
+  border: 2px solid #444;
+  border-radius: 5px;
+  background: #e8fc5b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e8fc5b 0%, #444444 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8fc5b), color-stop(100%, #444444));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e8fc5b 0%, #444444 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e8fc5b 0%, #444444 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e8fc5b 0%, #444444 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e8fc5b 0%, #444444 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+  line-height: 16px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  color: #FFF;
+}
+body #wrapper form fieldset input#tb-age {
+  width: 40px;
+  padding-left: 5px;
+  padding-right: 0;
+}
+body #wrapper form input[type=radio] {
+  display: none;
+}
+body #wrapper form input[type=radio] + label {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+body #wrapper form input[type=radio]#radio-yes:checked + label {
+  font-weight: bold;
+  font-size: 1.10em;
+}
+body #wrapper form input[type=radio]#radio-no:checked + label {
+  font-weight: bold;
+  font-size: 1.10em;
+}
+body #wrapper form input[type=reset],
+body #wrapper form button {
+  border: none;
+  background: #e3fd28;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e3fd28 0%, #444444 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3fd28), color-stop(100%, #444444));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e3fd28 0%, #444444 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e3fd28 0%, #444444 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e3fd28 0%, #444444 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e3fd28 0%, #444444 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+  border-radius: 5px;
+  border-bottom: 1px solid #000;
+  color: #333;
+  padding: 5px 15px;
+  font-size: 1.15em;
+  margin-top: 10px;
+}
+body #wrapper form input[type=reset]:hover,
+body #wrapper form button:hover {
+  background: none;
+  background-color: #F1FF8E;
+}
+/*# sourceMappingURL=task3.css.map */

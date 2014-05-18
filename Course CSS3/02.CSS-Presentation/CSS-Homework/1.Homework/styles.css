@@ -1,0 +1,13 @@
+.main {
+    margin: 150px auto;
+    width: 600px;
+    text-align: justify;
+    color: #0094ff;
+    font-family: Consolas;
+}
+
+.bold {
+    font-family: 'Edwardian Script ITC';
+    font-size: 30px;
+    font-weight: bold;
+}

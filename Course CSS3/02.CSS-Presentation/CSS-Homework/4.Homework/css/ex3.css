@@ -1,0 +1,158 @@
+div.main {
+		margin:auto;
+		margin-top:30px;
+		width:600px;
+		height:560px;
+		border: 2px solid #888;
+		border-radius:4px;
+		overflow:hidden;
+		background-color:#BCD8F6;
+		box-shadow: 5px 5px 5px #353C49;
+}
+header.main-header {
+		font-size:30px;
+}
+span.window-buttons  ul {
+		text-align:center;
+		margin-top:-2px;
+		margin-right:-15px;
+		padding:0px;
+}
+span.window-buttons  ul  li{
+		border-radius:2px;
+		display:inline-block;
+}
+span.window-buttons  ul  li img{
+		border:2px solid #888;
+}
+span.window-buttons  ul  li#minimize img{
+		border-radius:0px 0px 0px 2px;
+}
+span.window-buttons  ul  li#exit img{
+		border-radius:0px 0px 2px 0px;
+}
+
+span.window-buttons  ul  li img:hover{
+		cursor:pointer;
+}
+span.window-buttons  ul  li#exit img:hover{
+		cursor:pointer;
+}
+span.window-buttons {
+		float:right;
+		margin-top:-7px;
+		margin-right: 20px;
+		padding:0px;
+}
+div.window {
+		position:relative;
+		margin-left:10px;
+		width:580px;
+		border:1px solid #888;
+		background-color:#D5E0ED;
+}
+div.window header {
+		background-color:#E6EBF6;
+		border-bottom:1px solid #888;
+		height:20px;
+}
+ul#menu {
+		position:relative;
+		margin-left:-40px;
+		margin-top:0px;
+}
+ul#menu li  {
+		display:inline-block;
+		list-style-type:none;
+		padding-right:8px;
+		padding-left:8px;
+		padding-bottom:1px;
+}
+ul#menu li:hover {
+		background-color:#91BEE0;
+		cursor:pointer;
+		text-decoration:underline;
+}
+a {		
+		text-decoration:none;
+		color:black;
+}
+div.calculator {
+		width:540px;
+		position:relative;
+		margin:10px;
+}
+div.calculator  table{
+		position:relative;
+		margin:auto;
+		width:540px;
+}
+td {
+		width:35px;
+		height:25px;
+		border-radius:4px;
+		color:#3C2E50;
+		font-family:courier new;
+}
+td#display {
+		background-color:white;
+		vertical-align: bottom;
+		text-align: right;
+		height:55px;
+		font-size:20px;
+}
+table#some {
+		height:60px;
+}
+tr#zeros td {
+		text-align:left;
+		width:35;
+		height:25px;
+}
+tr#grey td{
+		text-align:left;
+		width:35;
+		height:25px;
+		color:#7585A3;
+}
+tr#grey td#right ,
+tr#zeros td#right{
+		text-align:right;
+}
+tr#controls td#choose{
+		width:100px;
+		text-align:left;
+}
+td#choose div ul {
+		list-style-type:none;
+		margin-left:-20px;
+}
+tr#controls td {
+		width:30px;
+		height:30px;
+		text-align:center;
+}
+td#button {
+		background-color:#E4EBF4;
+}
+td#button:hover ,
+td#number:hover {
+		background-color:#FBD67F;
+		cursor:pointer;
+		font-family:arial;
+}
+td#number {
+		background-color:#F1F5F9;
+}
+
+
+
+
+
+
+
+
+
+
+
+

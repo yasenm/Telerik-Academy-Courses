@@ -1,0 +1,76 @@
+﻿html,body,div,h1,img,p,ul,li,span,a {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+    width: 960px;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+
+    #wrapper {
+        background-color: #CCC;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-left: 15px;
+        width: 680px;
+
+        div {
+            position: relative;
+            .holder {
+                img {
+                    width: 550px;
+                    border-radius: 5px;
+                }
+            }
+
+            .playlist {
+                position: absolute;
+                left: 560px;
+                top: 0;
+
+                ul {
+                    text-align:center;
+
+                    li {
+                        width: 115px;
+                        border-bottom: 1px solid black;
+                        padding: 5px 0 5px 5px;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-weight: bold;
+                        }
+
+                        img {
+                            display: block;
+                            margin: auto;
+                            border-radius: 10px;
+                        }
+
+                        span {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

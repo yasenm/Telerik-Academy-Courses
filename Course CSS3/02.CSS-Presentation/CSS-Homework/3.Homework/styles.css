@@ -1,0 +1,12 @@
+.main {
+    margin: 150px auto;
+    background-color: #000;
+    width: 300px;
+    border-radius: 60px;
+}
+
+div {
+    padding: 0px 17px 0px 0px;
+    border: 1px solid #ff0000;
+    border-radius: inherit;
+}

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>List exercise HTML</title>
+    <style>
+        ul.main-list {
+            list-style-type : upper-roman
+        }
+        ul.low-alpha {
+            list-style-type : lower-alpha
+        }
+        ul.numbers {
+            list-style-type : decimal
+        }
+        ul.discs {
+            list-style-type : disc
+        }
+        ul.circles {
+            list-style-type : circle
+        }
+    </style>
+</head>
+<body>
+    <div>Preceding Text</div>
+    <ul class="main-list">
+        <li>
+            List Item 1
+            <ul class="low-alpha">
+                <li>Nested Item 1.1</li>
+                <li>Nested Item 1.2</li>
+            </ul>
+        </li>
+        <li>
+            List Item 2
+            <ul class="numbers">
+                <li>Nested Item 2.1</li>
+                <li>
+                    Nested Item 2.2
+                    <ul class="circles">
+                        <li>Nested Item 2.2.1</li>
+                        <li>
+                            Nested Item 2.2.2
+                            <ul>
+                                <li>Nested Item 2.2.2.1</li>
+                                <li>Nested Item 2.2.2.2</li>
+                            </ul>
+                        </li>
+                        <li>Nested Item 2.2.3</li>
+                    </ul>
+                </li>
+                <li>Nested Item 2.3</li>
+            </ul>
+        </li>
+        <li>
+            List Item 3
+            <ul class="discs">
+                <li>Nested Item 3.1</li>
+                <li>Nested Item 3.1</li>
+                <li>Nested Item 3.1</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,131 @@
+﻿html,body,div,ul,li,a,fieldset,legend,label,select,textarea,button,span,img {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-size: 16px;
+
+    #wrapper {
+        margin-top: 14px;
+        margin-left: 15px;
+
+        ul {
+            width: 110px;
+
+            li {
+                padding: 5px 5px 7px 5px;
+                border-top: 1px solid #000;
+
+                &:last-of-type {
+                    border-bottom: 1px solid #000;
+                }
+
+                a {
+
+                    span {
+                        &.current {
+                            font-weight: bold;
+                        }
+                    }
+
+                    img {
+                        width: 25px;
+                    }
+                }
+
+                div {
+                    position: absolute;
+                    margin-top: -17px;
+                    margin-left: 57px;
+
+                    a {
+                        display: block;
+                        position: absolute;
+                        margin-top: -2px;
+                        margin-left: 234px;
+                        padding: 0 5px;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        z-index: 5;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    div {
+
+                        fieldset {
+                            padding: 15px;
+                            border: 1px solid black;
+
+                            legend {
+                                padding: 0 2px;
+                                font-size: 1.2em;
+                                font-weight: bold;
+
+                            }
+
+                            label {
+
+                            }
+
+                            select {
+
+                                option {
+
+                                }
+                            }
+
+                            textarea {
+
+                            }
+
+                            button {
+                                .vertical-gradient(#CACACA,0%,#686868,100%);
+                                border: none;
+                                border-radius: 15px;
+                                padding: 5px 10px;
+                                font-size: 0.8em;
+
+                                &:hover {
+                                    background: none;
+                                    background-color: #CCCCCC;
+                                }
+                            }
+                        }
+                    }
+
+                    &.popup-content {
+
+                    }
+
+                    &.invisible {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

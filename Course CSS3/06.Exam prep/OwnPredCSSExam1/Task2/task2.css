@@ -1,0 +1,142 @@
+body,
+html,
+div,
+ul,
+li,
+a,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 960px;
+  font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+  font-size: 16px;
+}
+body #wrapper {
+  margin-left: 15px;
+  margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 340px;
+  height: 230px;
+}
+body #wrapper .tab-strip {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+body #wrapper .tab-strip > li {
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+}
+body #wrapper .tab-strip > li:last-of-type a {
+  border-right: none;
+}
+body #wrapper .tab-strip > li a {
+  background: #ededed;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ededed 0%, #ababab 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #ababab));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ededed 0%, #ababab 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ededed 0%, #ababab 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ededed 0%, #ababab 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ededed 0%, #ababab 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 1.4em;
+}
+body #wrapper .tab-strip > li a:hover {
+  background: none;
+  background-color: #EEEEEE;
+}
+body #wrapper .tab-strip > li .tab-content {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 70px;
+}
+body #wrapper .tab-strip > li .tab-content ul {
+  z-index: 100;
+  list-style-type: upper-alpha;
+  text-align: left;
+}
+body #wrapper .tab-strip > li .tab-content ul li {
+  border: none;
+}
+body #wrapper .tab-strip > li .tab-content ul li ul {
+  margin-left: 25px;
+}
+body #wrapper .tab-strip .current a {
+  border: none;
+  background: none;
+  border-right: 1px solid black;
+  border-radius: 0;
+  font-weight: bold;
+}
+body #wrapper .tab-strip .current .tab-content {
+  display: block;
+  position: absolute;
+  top: 66px;
+  left: 30px;
+}
+body #wrapper .tab-strip .current .tab-content ul {
+  display: block;
+}
+body #wrapper .tab-strip .current .tab-content ul li {
+  display: block;
+}
+body #wrapper .tab-strip .current .tab-content table {
+  border-collapse: collapse;
+  width: 304px;
+  margin-left: 6px;
+}
+body #wrapper .tab-strip .current .tab-content table thead tr {
+  background: #ababab;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ababab 0%, #ededed 75%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ababab), color-stop(75%, #ededed));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ababab 0%, #ededed 75%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ababab 0%, #ededed 75%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ababab 0%, #ededed 75%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ababab 0%, #ededed 75%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+}
+body #wrapper .tab-strip .current .tab-content table thead tr th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+body #wrapper .tab-strip .current .tab-content table tbody tr td {
+  background-color: #EDEDED;
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+}
+/*# sourceMappingURL=task2.css.map */

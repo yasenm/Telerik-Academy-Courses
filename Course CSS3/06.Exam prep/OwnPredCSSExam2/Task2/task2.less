@@ -1,0 +1,107 @@
+﻿body,html,div,ul,li,a,img,span {
+    margin:0;
+    padding:0;
+}
+
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+img {
+    width: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #777;
+}
+
+body {
+    font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+    font-size: 16px;
+
+    #wrapper {
+        width: 960px;
+        margin-top: 30px;
+        margin-left: 25px;
+
+        .notification-list {
+            width: 470px;
+
+            li {
+                border: 1px solid black;
+                border-left: none;
+                .vertical-gradient(#ABABAB,0%,#DDDDDD,100%);
+                display: inline;
+                padding: 5px;
+                padding-left: 15px;
+                padding-top: 7px;
+                text-align: center;
+
+                &:first-of-type {
+                    border-left: 1px solid black;
+                    border-radius: 15px 0 0 0;
+                }
+
+                &:last-of-type {
+                    border-radius: 0 15px 0 0;
+                    padding-right: 15px;
+                }
+
+                &:hover {
+                    border-bottom: 1px solid #DDD;
+
+                    div.content {
+                        display: block;
+                    }
+                }
+
+                a {
+                    font-size: 1.2em;
+                }
+
+                div.content {
+                    display: none;
+                    position: absolute;
+                    top: 56px;
+                    left: 25px;
+                    border: 1px solid black;
+                    border-top: none;
+                    text-align: left;
+                    width: 469px;
+                    background-color: #DDD;
+
+                    ul {
+                        li {
+                            font-size: 0.85em;
+                            text-align: left;
+                            background: none;
+                            display: block;
+                            border: none;
+
+                            &:hover {
+                                a {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            a {
+                                span {
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

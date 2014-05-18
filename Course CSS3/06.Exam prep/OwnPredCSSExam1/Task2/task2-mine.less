@@ -1,0 +1,151 @@
+﻿body,html,div,ul,li,a,table,thead,tbody,tfoot,tr,th,td {
+    margin:0;
+    padding:0;
+}
+
+.vertical-gradient(@color1,@color2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 0%, @color2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 0%,@color2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 0%,@color2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 0%,@color2 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 0%,@color2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+.vertical-gradient-with-percents(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+    width: 960px;
+    font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+    font-size: 16px;
+
+    #wrapper {
+        margin-left: 15px;
+        margin-top: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 340px;
+        height: 230px;
+
+        .tab-strip {
+            padding-left: 1px;
+            padding-right: 1px;
+
+            & > li {
+                display: inline-block;
+                text-align: center;
+                width: 25%;
+
+                &:last-of-type {
+                    a {
+                        border-right: none;
+                    }
+                }
+
+
+                a {
+                    .vertical-gradient-with-percents(#EDEDED,0%,#ABABAB,100%);
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid black;
+                    border-radius: 5px;
+                    display: block;
+                    color: black;
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    font-size: 1.4em;
+
+                    &:hover {
+                        background: none;
+                        background-color: #EEEEEE;
+                    }
+                }
+
+                .tab-content {
+                    display: none;
+                    position: absolute;
+                    left: 20px;
+                    top: 70px;
+
+                    ul {
+                        z-index: 100;
+                        list-style-type: upper-alpha;
+                        text-align: left;
+
+                        li {
+                            border: none;
+
+                            ul {
+                                margin-left: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .current {
+                
+                a {
+                    border: none;
+                    background: none;
+                    border-right: 1px solid black;
+                    border-radius: 0;
+                    font-weight:bold;
+                }
+                .tab-content {
+                    display: block;
+                    position: absolute;
+                    top: 66px;
+                    left: 30px;
+
+                    ul {
+                        display: block;
+
+                        li {
+                            display: block;
+                        }
+                    }
+
+                    table {
+                        border-collapse: collapse;
+                        width: 304px;
+                        margin-left: 6px; 
+
+                        thead {
+                            tr {
+                                .vertical-gradient-with-percents(#ABABAB,0%,#EDEDED,75%);
+
+                                th {
+                                    border: 1px solid black;
+                                    padding: 5px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    background-color: #EDEDED;
+                                    border: 1px solid black;
+                                    padding: 5px;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

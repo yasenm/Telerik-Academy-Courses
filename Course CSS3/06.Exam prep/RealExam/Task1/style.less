@@ -1,0 +1,114 @@
+﻿html,body,div,header,h1,nav,ul,li,a,article,p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clearfix(){
+    zoom:1;
+    &:before, &:after{
+        content:"";
+        display:table; 
+    }
+    &:after{ 
+        clear: both;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    #wrapper {
+	    width: 960px;
+	    margin: 0 auto;
+
+        header {
+            color: #575E5B;
+            background-color: #F6F5E9;
+            background-image: url(images/header-bg.png);
+            background-repeat: repeat-x;
+            .clearfix();
+            padding: 15px;
+
+            h1 {
+                font-size: 16px;
+                text-transform:uppercase;
+            }
+
+            nav {
+                position: absolute;
+                top: 17px;
+                right: 220px;
+                font-size: 14px;
+
+                ul {
+
+                    li {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+
+        div {
+
+            &#searchBar {
+                .clearfix();
+                background-color: #000;
+                color: #C6C6C6;
+                font-size: 16px;
+                padding: 8px;
+
+                div {
+
+                    a {
+                        color: #C6C6C6;
+                        font-size: 14px;
+                    }
+
+                    &#archives {
+                        float: left;
+
+                        a {
+                        }
+                    }
+
+                    &#search {
+                        float: right;
+
+                    }
+                }
+            }
+
+            &#content {
+                color: #575E5B;
+                margin-left: 5px;
+
+                h1 {
+                    font-size: 24px;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+
+                article {
+                    font-size: 14px;
+                    p {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

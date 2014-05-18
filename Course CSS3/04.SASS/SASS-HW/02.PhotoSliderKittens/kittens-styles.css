@@ -1,0 +1,54 @@
+body, .main, li {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  background-color: gray; }
+  body div.main {
+    background-color: #603382;
+    padding-bottom: 20px;
+    margin: 100px auto;
+    width: 800px;
+    border: 15px ridge #1b0f4b;
+    border-radius: 30px;
+    position: relative; }
+    body div.main header nav ul {
+      margin: auto;
+      padding-top: 10px;
+      list-style-type: none; }
+      body div.main header nav ul li {
+        display: inline-block; }
+        body div.main header nav ul li img {
+          width: 100px;
+          height: 70px; }
+          body div.main header nav ul li img:hover {
+            cursor: pointer; }
+    body div.main section {
+      margin: auto;
+      width: 600px;
+      height: 400px; }
+      body div.main section ul {
+        margin-top: 15px;
+        list-style-type: none; }
+        body div.main section ul li img {
+          display: none;
+          margin: auto;
+          width: 520px;
+          height: 370px; }
+        body div.main section ul li input {
+          display: none; }
+          body div.main section ul li input:checked + label #kitten-1-img {
+            display: block; }
+          body div.main section ul li input:checked + label #kitten-2-img {
+            display: block; }
+          body div.main section ul li input:checked + label #kitten-3-img {
+            display: block; }
+          body div.main section ul li input:checked + label #kitten-4-img {
+            display: block; }
+          body div.main section ul li input:checked + label #kitten-5-img {
+            display: block; }
+          body div.main section ul li input:checked + label #kitten-6-img {
+            display: block; }
+          body div.main section ul li input:checked + label #kitten-7-img {
+            display: block; }
+

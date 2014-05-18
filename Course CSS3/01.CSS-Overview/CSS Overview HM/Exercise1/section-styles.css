@@ -1,0 +1,48 @@
+body {
+    background-color : #5391a5;
+}
+
+.user-info {
+    background-color : #595959;
+    border : 5px solid #000;
+    border-radius : 20px;
+    margin : 100px auto;
+}
+
+
+section {
+    width : 350px;
+}
+
+table {
+    padding : 15px;
+    width : 300px;
+    color : #B0A287;
+}
+
+table img {
+    width : 5%;
+}
+
+table footer {
+    color : #F11223;
+}
+
+tbody tr td:first-child,tfoot tr td:first-child {
+    color : #A6C4DF;
+    font-style : italic;
+    width : 55%;
+}
+
+tfoot tr td:last-child {
+    color : #D96B27;
+}
+
+a {
+    color : #F4EFAB;
+    text-decoration : none;
+}
+
+    a:hover {
+        text-decoration : underline;
+    }

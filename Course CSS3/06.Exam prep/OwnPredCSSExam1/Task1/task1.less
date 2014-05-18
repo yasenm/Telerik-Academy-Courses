@@ -1,0 +1,88 @@
+﻿body,html,div,aside,ul,li,a {
+    margin:0;
+    padding:0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.gradient(@color1,@color2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 0%, @color2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 0%,@color2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 0%,@color2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 0%,@color2 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 0%,@color2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    width: 960px;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+
+    #wrapper {
+        aside {
+            .sidebar {
+                .gradient(#D29BFF, #8977FF);
+                margin-top: 10px;
+                margin-left: 20px;
+                border-radius: 10px;
+                font-size: 1.4em;
+                padding: 5px 15px;
+                width: 185px;
+
+                li {
+                    display: block;
+                    border-bottom: 1px solid #9D00FF;
+                    text-align: center;
+                    padding: 5px;
+
+                    &:last-of-type {
+                        border-bottom:none;
+                    }
+
+                    &:hover {
+                        border: 1px solid #9D00FF;
+                        border-radius: 5px;
+
+                        ul {
+                            display: block;
+                        }
+                    }
+
+                    a {
+
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        margin-left: 185px;
+                        margin-top: -36px;
+                        background-color: #B5AAFF;
+                        border-radius: 10px;
+                        font-size: 0.8em;
+                        width: 212px;
+                        padding-top: 5px;
+                        padding-right: 5px;
+                        padding-bottom: 5px;
+                        padding-left: 20px;
+                        background-image: url(imgs/arrow.png);
+                        background-repeat: no-repeat;
+                        background-position-x: 5px;
+                        background-position-y: 15px;
+
+                    }
+                }
+            }
+        }
+    }
+}

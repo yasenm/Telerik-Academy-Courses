@@ -1,0 +1,111 @@
+body, .main, li
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background-color: gray;
+
+	div.main
+	{
+		background-color: #603382;
+		padding-bottom: 20px;
+		margin: 100px auto;
+		width: 800px;
+		border: 15px ridge #1b0f4b;
+		border-radius: 30px;
+		position: relative;
+
+		header
+		{
+			nav
+			{
+				ul
+				{
+					margin: auto;
+					padding-top: 10px;
+					list-style-type: none;
+
+					li
+					{
+						display: inline-block;
+
+						img
+						{
+							width: 100px;
+							height: 70px;
+
+							&:hover
+							{
+								cursor: pointer;
+							}
+						}
+					}
+				}	
+			}
+		}
+
+		section
+		{
+			margin: auto;
+			width: 600px;
+			height: 400px;
+
+			ul
+			{
+				margin-top: 15px;
+				list-style-type: none;
+
+				li
+				{
+				
+					img
+					{
+						display:none;
+						margin: auto;
+						width: 520px;
+						height: 370px;
+					}
+
+					input
+					{
+						display: none;
+
+
+						&:checked + label #kitten-1-img 
+						{
+							display: block;
+						}
+						&:checked + label #kitten-2-img 
+						{
+							display: block;
+						}
+						&:checked + label #kitten-3-img 
+						{
+							display: block;
+						}
+						&:checked + label #kitten-4-img 
+						{
+							display: block;
+						}
+						&:checked + label #kitten-5-img 
+						{
+							display: block;
+						}
+						&:checked + label #kitten-6-img 
+						{
+							display: block;
+						}
+						&:checked + label #kitten-7-img 
+						{
+							display: block;
+						}
+					}
+
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+﻿html,body,div,h1,h2,ul,li,span,input,button {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+    background-repeat:no-repeat;
+}
+
+body {
+    font-size: 18px;
+    font-family: Arial;
+
+    #root {
+        width: 610px;
+        color: #2AA0BD;
+        margin: 8px;
+
+        h1 {
+            margin: auto;
+            text-align: center;
+            font-size: 1.9em;
+            font-style: italic;
+            margin-bottom: 23px;
+        }
+
+        div {
+            vertical-align: top;
+            text-align: center;
+
+            h2 {
+                font-size: 1.5em;
+                margin-top: 22px;
+            }
+
+            div {
+                margin-top: 10px;
+
+                div.messages {
+                    width: 100%;
+                    margin: auto;
+                    font-size: 1em;
+                    padding-top: 28px;
+
+                    ul {
+                        padding: 0 15px;
+
+                        li {
+                            display: block;
+                            border-bottom: 1px solid black;
+
+                            &:last-of-type {
+                                border: none;
+                            }
+
+                            strong {
+                                font-size: 0.95em;
+                                font-style: italic;
+                                font-weight: bold;
+                            }
+
+                            span {
+                                display: block;
+                            }
+
+                            &.me {
+                                text-align: left;
+                            }
+
+                            &.other {
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+
+                div.sent-message {
+                    vertical-align: bottom;
+                    margin-left: -6px;
+                    margin-top: 282px;
+
+                    button {
+                        color: #2AA0BD;
+
+                        &:hover {
+                            .vertical-gradient(#4AE871,0%,#F1FFBC,100%);
+                        }
+                    }
+
+                    input {
+                        width: 170px;
+                    }
+
+                    button, input {
+                        border: 1px solid #CCC;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        background: none;
+                        padding: 5px 15px;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+
+            &.chat-container {
+                width: 300px;
+                height: 500px;
+                display: inline-block;
+                .vertical-gradient(#4AE871,45%,#F1FFBC,75%);
+                border: 1px solid #CCCCCC;
+                border-radius: 5px;
+            }
+
+            &#me {
+            }
+
+            &#other {
+            }
+        }
+    }
+}

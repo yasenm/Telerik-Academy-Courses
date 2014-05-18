@@ -1,0 +1,116 @@
+﻿html,body,div,a,form,fieldset,legend,input,button {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    color: #000;
+
+    #wrapper {
+        width: 960px;
+        margin-left: 50px;
+
+        a {
+            font-size: 1.2em;
+
+            &.current {
+                font-weight: bold;
+            }
+        }
+
+        form {
+            text-align: right;
+            width: 450px;
+            .vertical-gradient(#FFF,10%,#595959,100%);
+
+            fieldset {
+                border: 5px solid #000;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                padding-right: 75px;
+                vertical-align: central;
+                padding-bottom: 10px;
+
+                legend {
+                    font-size: 1.7em;
+                    font-style: italic;
+                    font-weight: bold;
+                    padding: 0 10px;
+                    background: none;
+                }
+
+                label {
+                    font-weight: bold;
+                    padding-right: 1px;
+                }
+
+                input {
+                    .vertical-gradient(#020202,0%,#CACACA,100%);
+                    border: none;
+                    line-height: 26px;
+                    padding: 5px 15px 5px 15px;
+                    border-radius: 15px;
+                    margin-top: 7px;
+                    color: #FFF;
+
+                    &:first-of-type {
+                        margin-top: 13px;
+                    }
+
+                    &:focus {
+                        color: #FFF;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: #A9A9A9;
+                    }
+                    &:-moz-placeholder { /* Firefox 18- */
+                        color: #A9A9A9;
+                    }
+                    &::-moz-placeholder {  /* Firefox 19+ */
+                        color: #A9A9A9;
+                    }
+                    &:-ms-input-placeholder {  
+                        color: #A9A9A9;
+                    }
+                }
+
+                button {
+                    .vertical-gradient(#000,0%,#FCFCFC,100%);
+                    border: 2px solid #000;
+                    border-radius: 15px;
+                    line-height: 25px;
+                    padding: 4px 10px;
+                    font-size: 1.2em;
+                    margin-top: 10px;
+
+                    &:hover {
+                        background: none;
+                        .vertical-gradient(#000,0%,#CACACA,100%);
+                    }
+                }
+            }
+
+            &.invisible {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+﻿body,html,div,form,legend,label,input,fieldset,button {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+.style-buttons() {
+    .vertical-gradient(#36C2FF,0%,#8CFFFB,100%);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+
+    &:hover {
+        background: none;
+        background-color: #9BE1FF;
+    }
+}
+
+body {
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-size: 16px;
+
+    #wrapper {
+        width: 960px;
+
+        form {
+            border: 1px solid black;
+            border-radius: 15px;
+            .vertical-gradient(#68D1FF,0%,#8CFFFB,100%);
+            margin-top: 25px;
+            margin-left: 25px;
+            text-align: right;
+            padding: 15px 15px;
+            width: 380px;
+
+            fieldset {
+                border-radius: 5px;
+                border: 3px solid black;
+                padding: 0 15px;
+                padding-bottom: 5px;
+
+                legend {
+                    font-size: 1.3em;
+                    font-style: italic;
+                    padding: 0 5px;
+                    padding: 0 15px;
+                    margin-bottom: 5px;
+                }
+
+                label {
+                }
+
+                input {
+                    margin-top: 1px;
+                    .vertical-gradient(#69D2FF,0%,#8BFEFB,100%);
+                    border: 1px solid #008FCE;
+                    border-radius: 5px;
+                    height: 16px;
+                    width: 149px;
+                    padding: 5px 15px;
+
+                    &[type=number] {
+                        width: 35px;
+                        padding: 5px;
+                    }
+                }
+            }
+
+            input[type=radio] {
+                margin-top: 7px;
+                /*&:checked {
+                    border: 3px solid #183348;
+                    background-color: #0B82C7;
+                }*/
+            }
+
+            button {
+                .style-buttons();
+            }
+
+            input[type=reset] {
+                .style-buttons();
+            }
+        }
+    }
+}
+
+

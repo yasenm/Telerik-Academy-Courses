@@ -1,0 +1,56 @@
+.main {
+    width : 900px;
+    margin : 20px auto;
+    border : 1px solid #000;
+}
+
+table {
+    width : 100%;
+    grid-cell : initial;
+}
+
+thead {
+    border-radius : 10px;
+}
+
+thead, tfoot {
+    background-color : #a1a1a1;
+    border-top-right-radius : 30px;
+}
+
+thead tr td input[type=text] {
+    width : 70%;
+}
+
+#id {
+    width : 8%;
+}
+
+#pr-name {
+    width : 30%;
+}
+
+#u-pr {
+    width : 15%;
+}
+
+#q-per-u {
+    width : 20%;
+}
+
+#u-in-stock {
+    width : 15%;
+}
+
+tfoot tr td {
+    padding : 5px;
+    height : 20px;
+}
+    tfoot tr td a {
+        text-decoration : none;
+    }
+
+#btm-r {
+    text-align : right;
+}
+

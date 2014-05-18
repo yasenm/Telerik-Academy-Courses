@@ -1,0 +1,137 @@
+html,
+body,
+div,
+h1,
+h2,
+ul,
+li,
+span,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-size: 18px;
+  font-family: Arial;
+}
+body #root {
+  width: 610px;
+  color: #2AA0BD;
+  margin: 8px;
+}
+body #root h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 1.9em;
+  font-style: italic;
+  margin-bottom: 23px;
+}
+body #root div {
+  vertical-align: top;
+  text-align: center;
+}
+body #root div h2 {
+  font-size: 1.5em;
+  margin-top: 22px;
+}
+body #root div div {
+  margin-top: 10px;
+}
+body #root div div div.messages {
+  width: 100%;
+  margin: auto;
+  font-size: 1em;
+  padding-top: 28px;
+}
+body #root div div div.messages ul {
+  padding: 0 15px;
+}
+body #root div div div.messages ul li {
+  display: block;
+  border-bottom: 1px solid black;
+}
+body #root div div div.messages ul li:last-of-type {
+  border: none;
+}
+body #root div div div.messages ul li strong {
+  font-size: 0.95em;
+  font-style: italic;
+  font-weight: bold;
+}
+body #root div div div.messages ul li span {
+  display: block;
+}
+body #root div div div.messages ul li.me {
+  text-align: left;
+}
+body #root div div div.messages ul li.other {
+  text-align: right;
+}
+body #root div div div.sent-message {
+  vertical-align: bottom;
+  margin-left: -6px;
+  margin-top: 282px;
+}
+body #root div div div.sent-message button {
+  color: #2AA0BD;
+}
+body #root div div div.sent-message button:hover {
+  background: #4ae871;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4ae871 0%, #f1ffbc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4ae871), color-stop(100%, #f1ffbc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4ae871 0%, #f1ffbc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4ae871 0%, #f1ffbc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4ae871 0%, #f1ffbc 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4ae871 0%, #f1ffbc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+  background-repeat: no-repeat;
+}
+body #root div div div.sent-message input {
+  width: 170px;
+}
+body #root div div div.sent-message button,
+body #root div div div.sent-message input {
+  border: 1px solid #CCC;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: none;
+  padding: 5px 15px;
+  font-size: 1.1em;
+}
+body #root div.chat-container {
+  width: 300px;
+  height: 500px;
+  display: inline-block;
+  background: #4ae871;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4ae871 45%, #f1ffbc 75%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(45%, #4ae871), color-stop(75%, #f1ffbc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4ae871 45%, #f1ffbc 75%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4ae871 45%, #f1ffbc 75%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4ae871 45%, #f1ffbc 75%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4ae871 45%, #f1ffbc 75%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+  background-repeat: no-repeat;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */

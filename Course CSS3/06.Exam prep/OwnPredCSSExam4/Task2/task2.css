@@ -1,0 +1,60 @@
+html,
+body,
+div,
+h1,
+img,
+p,
+ul,
+li,
+span,
+a {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  width: 960px;
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+}
+body #wrapper {
+  background-color: #CCC;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 680px;
+}
+body #wrapper div {
+  position: relative;
+}
+body #wrapper div .holder img {
+  width: 550px;
+  border-radius: 5px;
+}
+body #wrapper div .playlist {
+  position: absolute;
+  left: 560px;
+  top: 0;
+}
+body #wrapper div .playlist ul {
+  text-align: center;
+}
+body #wrapper div .playlist ul li {
+  width: 115px;
+  border-bottom: 1px solid black;
+  padding: 5px 0 5px 5px;
+}
+body #wrapper div .playlist ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+body #wrapper div .playlist ul li img {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=task2.css.map */

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="form-styles.css"/>
+</head>
+<body>
+    <div class="main">
+        <form method="post">
+            <fieldset>
+                <legend>Client details</legend>
+                    <label>Member name : </label>
+                    <input type="text" 
+                           required="true" 
+                           autofocus="autofocus"
+                           placeholder="Enter name here"/>
+                    <br />
+                    <label>Email : </label>
+                    <input type="email" 
+                            required="true" 
+                            pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+                            placeholder="sample@address.com" />
+                    <br />
+                    <label>School : </label>
+                    <input type="text" 
+                           required="true"
+                           placeholder="Enter school here" />
+                    <br />
+                    <input type="submit" value="Submit" id="submit"/>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

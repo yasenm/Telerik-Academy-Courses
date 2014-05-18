@@ -1,0 +1,38 @@
+.main {
+    margin : 50px auto;
+    width : 500px;
+}
+
+table {
+    border : 1px solid #000;
+}
+
+tr td:first-child {
+    background-color : red;
+    text-align : right;
+    width : 170px;
+    font-family : fantasy;
+}
+
+thead tr td:first-child,tfoot tr td:first-child {
+    text-align : center;
+    height : 45px;
+}
+
+thead tr td:first-child {
+    font-size : 25px;
+    font-style : italic;
+}
+
+#city {
+    width : 60%;
+}
+
+#st {
+    width : 20%;
+}
+
+#com-q {
+    height : 45px;
+    width : 98.5%;
+}

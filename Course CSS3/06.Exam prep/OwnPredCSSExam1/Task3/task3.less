@@ -1,0 +1,140 @@
+﻿body,html,div,h1,ul,li,input,button,span,p {
+    margin:0;
+    padding:0;
+}
+
+.vertical-gradient(@color1,@color2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 0%, @color2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 0%,@color2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 0%,@color2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 0%,@color2 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 0%,@color2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    color: black;
+    font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+    font-size: 16px;
+
+    #wrapper {
+        width: 960px;
+
+        div {
+            .vertical-gradient(#EEEEEE,#AAAAAA);
+            position: relative;
+            margin-top: 30px;
+            margin-left: 30px;
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 380px;
+            height: 463px;
+
+
+            &:after{
+                content: " "; /* Older browser do not support empty content */
+                visibility: hidden;
+                display: block;
+                height: 0;
+                clear: both;
+            }
+
+            h1 {
+                color: #555555;
+                text-align: center;
+                font-size: 1.8em;
+                margin-top: 15px;
+            }
+
+            .messages-list {
+                padding-top: 5px;
+
+                li {
+                    display: block;
+                    margin-top: 5px;
+                    width: 200px;
+                    border-radius: 15px;
+                    border: 1px solid black;
+                    padding: 5px 15px;
+                    color: #555555;
+
+                    span {
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+
+                    .date {
+                        font-size: 0.8em;
+                        font-weight: normal;
+                        font-family: Consolas;
+                        float: right;
+                    }
+                }
+
+                .me-item {
+                    .vertical-gradient(#29EDFF,#C0FAFF);
+                    float: right;
+                    margin-right: 15px;
+                }
+
+                .toshko-item {
+                    .vertical-gradient(#DFFFD2,#6FFF3B);
+                    float: left;
+                    margin-left: 15px;
+
+                    span {
+                        display:block;
+                        text-align: right;
+                    }
+
+                    .date {
+                        left: 0;
+                        float: left;
+                    }
+                }
+
+            }
+            
+            input {
+                border-radius: 5px;
+                background-color: #EEEEEE;
+                position: absolute;
+                bottom: 7px;
+                left: 15px;
+                border: none;
+                height: 34px;
+                width: 260px;
+                padding-left: 15px;
+                padding-bottom: 1px;
+                color: #555555;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                position: absolute;
+                bottom: 8px;
+                right: 17px;
+                .vertical-gradient(#EDEDED,#ABABAB);
+                padding: 5px 10px;
+                border: none;
+                font-size: 1.1em;
+                width: 69px;
+                border-radius: 5px;
+
+                &:hover {
+                    background: none;
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+}

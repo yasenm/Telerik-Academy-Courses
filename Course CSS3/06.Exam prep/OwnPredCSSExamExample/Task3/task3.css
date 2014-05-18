@@ -1,0 +1,104 @@
+html,
+body,
+div,
+ul,
+li,
+a,
+fieldset,
+legend,
+label,
+select,
+textarea,
+button,
+span,
+img {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  font-size: 16px;
+}
+body #wrapper {
+  margin-top: 14px;
+  margin-left: 15px;
+}
+body #wrapper ul {
+  width: 110px;
+}
+body #wrapper ul li {
+  padding: 5px 5px 7px 5px;
+  border-top: 1px solid #000;
+}
+body #wrapper ul li:last-of-type {
+  border-bottom: 1px solid #000;
+}
+body #wrapper ul li a span.current {
+  font-weight: bold;
+}
+body #wrapper ul li a img {
+  width: 25px;
+}
+body #wrapper ul li div {
+  position: absolute;
+  margin-top: -17px;
+  margin-left: 57px;
+}
+body #wrapper ul li div a {
+  display: block;
+  position: absolute;
+  margin-top: -2px;
+  margin-left: 234px;
+  padding: 0 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 5;
+}
+body #wrapper ul li div a:hover {
+  text-decoration: underline;
+}
+body #wrapper ul li div div fieldset {
+  padding: 15px;
+  border: 1px solid black;
+}
+body #wrapper ul li div div fieldset legend {
+  padding: 0 2px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+body #wrapper ul li div div fieldset button {
+  background: #cacaca;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #cacaca 0%, #686868 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cacaca), color-stop(100%, #686868));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cacaca 0%, #686868 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cacaca 0%, #686868 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cacaca 0%, #686868 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #cacaca 0%, #686868 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d29bff', endColorstr='#8977ff', GradientType=0);
+  /* IE6-9 */
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 0.8em;
+}
+body #wrapper ul li div div fieldset button:hover {
+  background: none;
+  background-color: #CCCCCC;
+}
+body #wrapper ul li div.invisible {
+  display: none;
+}
+/*# sourceMappingURL=task3.css.map */

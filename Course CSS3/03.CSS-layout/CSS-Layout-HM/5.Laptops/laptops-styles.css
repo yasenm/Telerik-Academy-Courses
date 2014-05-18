@@ -1,0 +1,64 @@
+div.main {
+    position: relative;
+    width: 800px;
+    margin: 50px auto;
+}
+
+.main header {
+    margin: auto;
+    text-align: center;
+}
+
+    .main header ul li {
+        display: inline-block;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    
+    .main header a {
+        color: #13bdbd;
+    }
+    
+    .main header a:hover {
+        color: #ffd800;
+    }
+
+section.laptops-menu {
+    border: 2px solid #808080;
+    padding: 10px;
+    padding-right: 0px;
+    margin: 10px;
+    width: 70%;
+}
+
+.laptops-menu article {
+    text-align:center;
+    margin: 5px;
+    width:47%;
+    display: inline-block;
+}
+
+    .laptops-menu article img {
+        width: 50%;
+        margin-top: -20px;
+        float: left;
+    }
+
+    .laptops-menu article ul li {
+        display: inline-block;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+
+.controls {
+    width: 22%;
+    float: right;
+    vertical-align: top;
+    text-align:center;
+    padding: 10px;
+    margin-top: 200px;
+}
+
+.controls, .laptops-menu {
+    display: inline-block;
+}

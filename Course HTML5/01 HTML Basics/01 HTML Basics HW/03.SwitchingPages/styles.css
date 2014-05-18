@@ -1,0 +1,41 @@
+div.main-part {
+    margin : 25px;
+    width : 600px;
+    background-color: #CCECFF;
+    border : 3px solid black;
+    border-radius : 25px;
+}
+img {
+    width : 50%;
+}
+ul.profile {
+    list-style-type : none;
+}
+ul.navigation {
+    text-align : center;
+    font-size : 22px;
+    height : 50px;
+    margin-top : 40px
+}
+ul.navigation li {
+    display : inline
+}
+h1 {
+    margin-left : 15px;
+    font-style : italic;
+}
+ul.navigation li a {
+    vertical-align : central;
+    margin-top : -15px;
+    margin : 35px
+}
+a {
+    font-style : oblique;
+    color : green;
+    text-decoration : none;
+}
+ul.friends-list {
+    list-style-type : decimal;
+    font-size : 18px;
+    font-style : italic;
+}

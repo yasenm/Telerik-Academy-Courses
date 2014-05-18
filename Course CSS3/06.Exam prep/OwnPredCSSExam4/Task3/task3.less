@@ -1,0 +1,135 @@
+﻿html,body,div,hgroup,h1,h2,h3,h4,h5,h6,p,a,span {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+span {
+    text-transform:uppercase;
+}
+
+body {
+    width: 960px;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+
+    #wrapper {
+        margin-top: 20px;
+        margin-left: 20px;
+
+        div {
+            display: inline-block;
+            width: 148px;
+            vertical-align: top;
+            border: 2px solid #D3D7DA;
+            margin-right: -6px;
+            background-position-x: 4px;
+            background-position-y: 14px;
+
+            &:nth-child(even) {
+                .vertical-gradient(#FFFFFF,0%,#F1F2F3,100%);
+                height: 280px;
+            }
+
+            &:nth-child(odd) {
+                height: 260px;
+            }
+            
+            &:nth-child(1) {
+                background-image: url(imgs/install.png);
+                background-repeat:no-repeat;
+            }
+            
+            &:nth-child(2) {
+                background-image: url(imgs/tuneUp.png);
+                background-repeat:no-repeat;
+            }
+
+            &:nth-child(3) {
+                background-image: url(imgs/manage.png);
+                background-repeat:no-repeat;
+            }
+
+            &:nth-child(4) {
+                background-image: url(imgs/openSource.png);
+                background-repeat:no-repeat;
+            }
+
+            &:nth-child(5) {
+                background-image: url(imgs/twitter.png);
+                background-repeat:no-repeat;
+            }
+            
+            &:nth-child(6) {
+                background-image: url(imgs/about.png);
+                background-repeat:no-repeat;
+            }
+
+            hgroup {
+                display: block;
+                margin-top: 10px;
+                margin-left: 44px;
+                font-size: 0.9em;
+                height: 40px;
+                vertical-align: bottom;
+
+
+                h3 {
+
+                }
+
+                h2 {
+                    font-size:1.1em;
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                display: block;
+                width: 95%;
+                margin-top: 11px;
+                padding: 5px 4px;
+            }
+
+            div {
+                padding: 5px 4px;
+                margin-top: -5px;
+                border: none;
+                width: 100%;
+
+                &.yellowBox {
+                    background: none;
+                    background-color: #FFFFDD;
+                    border: 1px solid #FFFF00;
+                    width: 89%;
+                    margin-left: 3px;
+                    height: 160px;
+
+                    a {
+                        display: inline;
+                    }
+                }
+
+                a {
+                    color: #D02D2F;
+                    display: block;
+                    text-decoration: none;
+
+                    span {
+
+                    }
+                }
+            }
+        }
+    }
+}

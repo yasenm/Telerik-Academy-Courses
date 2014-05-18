@@ -1,0 +1,56 @@
+div.main {
+    margin: 50px auto;
+    width: 500px;
+    border: 2px solid #6f5019;
+    border-radius: 10px;
+    background-color: #28292e;
+}
+
+header {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+header ul li {
+    padding-left: 5px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+    header input {
+        width: 120px;
+    }
+
+header img {
+    width: 35px;
+    float: left;
+}
+
+    header button img {
+        width: 15px;
+    }
+
+article {
+    padding-top: 0px;
+    padding: 20px;
+    color: #8d8a8a;
+}
+
+    article h2 {
+        color: #ff6a00;
+        font-size: 25px;
+    }
+
+    article span {
+        color: #f3f3f3;
+    }
+
+    article a {
+        text-decoration: none;
+        color: #8d8a8a;
+    }
+    
+    article a:hover {
+        text-decoration: underline;
+    }

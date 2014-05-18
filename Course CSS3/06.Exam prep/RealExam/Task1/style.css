@@ -1,0 +1,101 @@
+html,
+body,
+div,
+header,
+h1,
+nav,
+ul,
+li,
+a,
+article,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.clear {
+  clear: both;
+}
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body #wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+body #wrapper header {
+  color: #575E5B;
+  background-color: #F6F5E9;
+  background-image: url(images/header-bg.png);
+  background-repeat: repeat-x;
+  zoom: 1;
+  padding: 15px;
+}
+body #wrapper header:before,
+body #wrapper header:after {
+  content: "";
+  display: table;
+}
+body #wrapper header:after {
+  clear: both;
+}
+body #wrapper header h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+body #wrapper header nav {
+  position: absolute;
+  top: 17px;
+  right: 220px;
+  font-size: 14px;
+}
+body #wrapper header nav ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+body #wrapper div#searchBar {
+  zoom: 1;
+  background-color: #000;
+  color: #C6C6C6;
+  font-size: 16px;
+  padding: 8px;
+}
+body #wrapper div#searchBar:before,
+body #wrapper div#searchBar:after {
+  content: "";
+  display: table;
+}
+body #wrapper div#searchBar:after {
+  clear: both;
+}
+body #wrapper div#searchBar div a {
+  color: #C6C6C6;
+  font-size: 14px;
+}
+body #wrapper div#searchBar div#archives {
+  float: left;
+}
+body #wrapper div#searchBar div#search {
+  float: right;
+}
+body #wrapper div#content {
+  color: #575E5B;
+  margin-left: 5px;
+}
+body #wrapper div#content h1 {
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+body #wrapper div#content article {
+  font-size: 14px;
+}
+body #wrapper div#content article p {
+  margin-top: 15px;
+}
+/*# sourceMappingURL=style.css.map */

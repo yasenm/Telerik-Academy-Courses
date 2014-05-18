@@ -1,0 +1,142 @@
+﻿html,body,div,nav,ul,li,a,header {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.vertical-gradient(@color1,@percent1,@color2,@percent2){
+    background: @color1; /* Old browsers */
+    background: -moz-linear-gradient(top, @color1 @percent1, @color2 @percent2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@percent1,@color1), color-stop(@percent2,@color2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @color1 @percent1,@color2 @percent2); /* IE10+ */
+    background: linear-gradient(to bottom, @color1 @percent1,@color2 @percent2); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d29bff', endColorstr='#8977ff',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial;
+
+    #wrapper {
+        width: 960px;
+
+        nav {
+            .vertical-gradient(#002D44, 0%, #77D1FF,100%);
+            font-size: 2em;
+            padding: 40px;
+            height: 120px;
+
+            ul {
+                padding: 10px;
+
+                li {
+                    display: inline-block;
+                    width: 169px;
+                    padding: 5px 10px;
+                    border-radius: 15px;
+
+                    a {
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        left: 40px;
+                        top: 82px;
+
+                        li {
+                            width: 256px;
+                            /*a {
+
+                            }
+
+                            ul {
+                                display: none;
+                                position: absolute;
+                            }
+
+                            &:hover {
+
+                            }*/
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgba(16,91,139,0.8);
+                    }
+
+                    &.selected {
+                        background-color: #1E485E;
+
+                        ul {
+                            display: block;
+
+                            li {
+                                display: inline-block;
+
+                                ul {
+                                    display: none;
+                                    background: none;
+                                    .vertical-gradient(#FFF,0%,#77D1FF,100%);
+                                    position: absolute;
+                                    left: 10px;
+                                    top: 52px;
+                                    border-radius: 15px;
+                                    padding: 15px 28px;
+
+                                    li {
+                                        width: 324px;
+                                        text-align: center;
+                                        padding: 0;
+
+                                        a {
+                                            display: block;
+                                            border-bottom: 1px solid black;
+                                            padding: 5px 0;
+                                        }
+
+                                        &:last-of-type {
+                                            a {
+                                                border: none;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    z-index: 10;
+
+                                    ul {
+                                        display: block;
+
+                                        li {
+                                            display: block;
+
+                                            &:hover {
+                                                border-bottom: 1px solid black;
+
+                                                a {
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

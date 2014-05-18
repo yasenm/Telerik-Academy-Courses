@@ -1,0 +1,33 @@
+.main {
+    width : 800px;
+    margin : 50px auto;
+}
+
+img {
+    width : 80px;
+}
+
+thead {
+    text-align : center;
+}
+
+a {
+    text-decoration : none;
+    font-size : 25px;
+    font-family : 'Book Antiqua';
+    margin-left : 5px;
+}
+
+.cell-maker {
+    border : 2px solid #000;
+    width : 70%;
+}
+
+.laptop-offer tr td {
+    text-align : center;
+    font-family : 'Comic Sans MS';
+}
+
+.range-in {
+    width : 30%;
+}
