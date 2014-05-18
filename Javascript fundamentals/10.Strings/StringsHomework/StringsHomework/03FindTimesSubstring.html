@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>3 Find Word Occurances</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+        #textContainer {
+            width: 600px;
+            position: absolute;
+            font-size: 1.8em;
+            right: 0;
+            top: 0;
+            background: #0094ff;
+            color: #ffffff;
+            padding: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <label for="userInput">Substring to be checked case insensitive -> </label>
+        <input type="text" id="userInput" /><br />
+        <button onclick="findTimesSubstringClickEv()">Check times</button>
+    </div>
+
+    <div id="textContainer">
+        We are living in an yellow submarine. We don't have anything else.
+        Inside the submarine is very tight. So we are drinking all the day.
+        We will move out of it in 5 days.
+    </div>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script src="03FindTimesSubstring.js"></script>
+</body>
+</html>
